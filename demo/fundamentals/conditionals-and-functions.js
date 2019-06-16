@@ -93,7 +93,7 @@ for(let i =0; j<10; j++); {
 
 }
 }
-let x = 0;
+let number = 0;
 while (x < 10) {
 	console.log('Ran');
 	x = x + 1;
