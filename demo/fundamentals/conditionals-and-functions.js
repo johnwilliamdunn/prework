@@ -54,8 +54,16 @@ console.log (squareNumber);
 
 let x = 10;
 
-function addnumbers (n, m, x) {
-	console.log (x);
+function addNumbers (n, m, x) {
+
+	return n + m;
+
+
+	addNumbers (2, 3, 8)
+	console.log(x);
+}
+{
+	console.log (n);
 	let b;
 	if (1===1) {
 		b = 8;
@@ -64,7 +72,7 @@ function addnumbers (n, m, x) {
 	return n + m
 }
 
-add numbers (1, 2, 10);
+addNumbers (1, 2, 10);
 
 
 /*...*/
@@ -77,7 +85,7 @@ let ourArray = [1, 2, 3, 4, 5, 6, 7];
 let arrLen = ourArray.length;
 console.log(ourArray[3][4]);
 
-for(let i = 0; i<arrLen.length; i++;){
+for(let i = 0; i<arrLen.length; i++); {
 	//console.log("i is equal to: " + i);
 	console.log(ourArray[i]);
 for(let i =0; j<10; j++); {
@@ -86,7 +94,7 @@ for(let i =0; j<10; j++); {
 }
 }
 let x = 0;
-while (x< 10) {
+while (x < 10) {
 	console.log('Ran');
 	x = x + 1;
 }
