@@ -24,7 +24,6 @@ function handleItemForm(event, formRef) {
 		let id = getRandomInt(0, 10000000);
 
 	let itemHtml = createListItemHtml(itemName.value, itemAmount.value, id);
-		console.log("Item HTML:", itemHtml);
 	let itemListRef = document.getElementById("shopping-list");
 	itemListRef.insertAdjacentHTML("afterend", itemHtml, id);
 
@@ -54,4 +53,4 @@ function createListItemHtml(itemName, itemAmount, id) {
 	min = Math.ceil(min);
 	max = Math.floor(max);
 		return Math.floor(Math.random() * (max- min)) + min;
-	}
+	};
