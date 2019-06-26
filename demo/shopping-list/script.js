@@ -23,9 +23,10 @@ function handleItemForm(event, formRef) {
 		let itemAmount = document.getElementById("item-amount");
 		let id = getRandomInt(0, 10000000);
 
-	let itemHtml = createListItemHtml(itemName.value, itemAmount.value, id);
-	let itemListRef = document.getElementById("shopping-list");
-	itemListRef.insertAdjacentHTML("afterend", itemHtml, id);
+		let itemHtml = createListItemHtml(itemName.value, itemAmount.value, id);
+		let itemListRef = document.getElementById("shopping-list");
+		itemListRef.insertAdjacentHTML("afterend", itemHtml, id);
+	}
 
 	setDeleteButtonEvent(id); {
 
@@ -35,10 +36,9 @@ function handleItemForm(event, formRef) {
 function setDeleteButtonEvent(id) {
 	let deleteButton = document.getElementById("button"+id);
 	deleteButton.addEventListener("click", () => {
-		removeListItem(id);
-})
+		removeListItem(id);}
 
-function createListItemHtml(itemName, itemAmount, id) {
+function createListHtml(itemName, itemAmount, id) {
 		return `<li id="item${id}">
            ${itemName} - ${itemAmount}
 		     <button id ="button${id}" type = "button">Delete Item</button>

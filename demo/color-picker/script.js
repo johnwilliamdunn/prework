@@ -5,20 +5,18 @@ window.onload = function() {
 function initColorPicker() {
 	let colorBox = document.getElementById('color-box');
 	let rgb = {
-		red: document.getElementById("red"),
-		green: document.getElementById("green"),
-		blue: document.getElementById("blue")
+		red: document.getElementById('red'),
+		green: document.getElementById('green'),
+		blue: document.getElementById('blue'),
 	};
-	let colorPickers = document.getElementsByClassName("picker");
+	let colorPickers = document.getElementsByClassName('picker');
 	setColorPickerEventListeners(colorBox, rgb, colorPickers);
 }
 
-function setColorPickerEventListeners(element, rgb, pickerElements) {
-	let pickerLen = pickerElements.length;
-
-	for (let i = 0; i < pickerLen; i++) {
+function setColorPickerEventListeners(element, colors, pickerElements) {
+	let pickerLength = pickerElements.length;
+	for (let i = 0; i < pickerLength; i++) {
 		pickerElements[i].addEventListener('change', () => {
-			console.log("Red value: ", rgb.red.value);
 			let red = colors.red.value;
 			let green = colors.green.value;
 			let blue = colors.blue.value;
@@ -28,19 +26,18 @@ function setColorPickerEventListeners(element, rgb, pickerElements) {
 
 	}
 
-
 }
 
 function setElementBGColor(bgElement, red, green, blue) {
-	rgbval=[red, green, blue].join(',');
-	colorBox.style.backgroundColor = "rgb(" + rgbval + ")";
+	let rgbval = [red, green, blue].join(',');
+	bgElement.style.backgroundColor = "rgb(" + rgbval + ")";
 
 }
 
 function setDisplayValues(red, green, blue) {
-	let redVal = document.getElementById(redVal);
-	let greenVal = document.getElementById(greenVal);
-	let blueVal = document.getElementById(blueVal);
+	let redVal = document.getElementById('redVal');
+	let greenVal = document.getElementById('greenVal');
+	let blueVal = document.getElementById('blueVal');
 
 	redVal.innerText = red;
 	greenVal.innerText = green;
